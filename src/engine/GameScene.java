@@ -1,0 +1,30 @@
+package engine;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GameScene {
+    public String sceneId;
+    public String background;
+    public String characterImage;
+    public String characterName;
+    public String dialog;
+    public String managerType;
+    public String nextScene;
+    public String setGuilty; // Untuk setting pelaku di awal
+    public String suspectId; // TAMBAHAN BARU: Siapa tersangka di scene ini?
+    public boolean hideDialogBox;    // True = Sembunyikan kotak dialog & teks
+    public boolean hideCharacter;    // True = Sembunyikan karakter
+    public boolean hideNameBox;      // True = Sembunyikan kotak nama
+    
+    public List<GameChoice> choices;
+    public List<String> requiredEvidence;
+    public List<String> collectibleEvidence;
+    
+    public GameScene() {
+        this.choices = new ArrayList<>();
+        this.requiredEvidence = new ArrayList<>();
+        this.collectibleEvidence = new ArrayList<>();
+    }
+}
+
